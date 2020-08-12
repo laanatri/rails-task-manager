@@ -1,0 +1,8 @@
+<% lala = @task.completed == true ? "checked" : "" %>
+<% lili = @task.completed == true ? "this task is completed" : "this task is not completed yet" %>
+<%= link_to "Edit this task", edit_task_path, class: "btn"%>
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><input class="check" type="checkbox" <%= lala %> ><%= lili %></p>
+<br><hr><br>
+<%= link_to "Back to list", tasks_path %>
